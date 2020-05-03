@@ -6,9 +6,20 @@ app = Flask(__name__)
 def helloFlask():
     return 'Hello Flask!'
 
+@app.route('/helloFlask/Allen')
+def helloUser_Allen():
+    return 'Hello Allen !!!'
+@app.route('/helloFlask/Ted')
+def helloUser_Ted():
+    return 'Hello Ted !!!'
+@app.route('/helloFlask/Jack')
+def helloUser_Jack():
+    return 'Hello Jack !!!'
+
+
 @app.route('/helloFlask/<username>')
 def helloUser(username):
-    return 'Hello {}'.format(username)
+    return 'Hello {} !!!!!!'.format(username)
 
 @app.route('/helloFlask/<username>/<age>')
 def userInfo(username, age):
