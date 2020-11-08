@@ -28,13 +28,6 @@ def hello_google():
     column = ['ID', 'Name', 'DeptId', 'Age', 'Gender', 'Salary']
     return render_template('show_staff.html', staff_data=staff_data,
                                               column=column)
-@app.route('/show_staff2')
-def hello_google2():
-    staff_data = [[d.ID, d.Name, d.DeptId, str(d.Age), d.Gender, d.Salary] for d in Staff.query()]
-    print(staff_data)
-    column = ['ID', 'Name', 'DeptId', 'Age', 'Gender', 'Salary']
-    return render_template('show_staff.html', staff_data=staff_data,
-                                              column=column)
 
 @app.route('/show_staff/<name>')
 def show_staff(name):
